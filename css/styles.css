@@ -313,9 +313,7 @@ ol {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   padding: 0;
-}
-
-.modal-close-icon {
+  cursor: pointer;
 }
 
 /* <!-- Section особливости --> */
@@ -697,6 +695,10 @@ ol {
 
 /* Portfolio cards */
 
+.portfolio-card-effects {
+  text-decoration: none;
+}
+
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
@@ -707,17 +709,14 @@ ol {
   height: 404px;
   margin-right: 30px;
   margin-bottom: 30px;
-}
-.portfolio-card-effects {
   display: block;
-  text-decoration: none;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-card-effects:hover,
-.portfolio-card-effects:focus {
+.portfolio-items:hover,
+.portfolio-items:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
