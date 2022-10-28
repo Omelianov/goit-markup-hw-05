@@ -33,7 +33,6 @@ ol {
   --studio-logo: #000000;
   --background-hero-footer: #2f303a;
   --color-social-media-links: #afb1b8;
-  --transform-and-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .body {
@@ -97,7 +96,10 @@ ol {
 
 .link-studia::after {
   content: '';
-  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, 1px);
   width: 100%;
   height: 4px;
   background: var(--accent-color);
@@ -105,12 +107,16 @@ ol {
 }
 
 .link.current.current {
+  position: relative;
   color: var(--accent-color);
 }
 
 .link-portfolio::after {
   content: '';
-  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, 1px);
   width: 100%;
   height: 4px;
   background: var(--accent-color);
@@ -119,7 +125,10 @@ ol {
 
 /* .link-contacts::after {
   content: '';
-  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, 1px);
   width: 100%;
   height: 4px;
   background: var(--accent-color);
@@ -180,7 +189,8 @@ ol {
 .link,
 .auth-nav-icon {
   transition-property: color, fill;
-  transition: var(--transform-and-cubic);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -247,7 +257,8 @@ ol {
   border: none;
   border-radius: 4px;
   transition-property: background-color;
-  transition: var(--transform-and-cubic);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-posluga:hover,
@@ -263,7 +274,9 @@ ol {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 50;
-  transition: opacity var(--transform-and-cubic), visibility var(--transform-and-cubic);
+  transition: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -494,7 +507,8 @@ ol {
   width: 100%;
   height: 100%;
   transition-property: background-color, fill;
-  transition: var(--transform-and-cubic);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover {
@@ -543,7 +557,8 @@ ol {
   fill: var(--color-social-media-links);
   background-color: var(--white-color);
   transition-property: fill;
-  transition: var(--transform-and-cubic);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-border {
@@ -669,7 +684,8 @@ ol {
   padding: 6px 22px;
   background-color: var(--background-color-secondary);
   transition-property: background-color, color, box-shadow;
-  transition: var(--transform-and-cubic);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sort:hover,
@@ -696,7 +712,8 @@ ol {
   display: block;
   text-decoration: none;
   transition-property: box-shadow;
-  transition: var(--transform-and-cubic);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card-effects:hover,
@@ -758,7 +775,8 @@ ol {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: transform var(--transform-and-cubic);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card-overlay-text {
